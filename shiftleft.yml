@@ -1,3 +1,5 @@
+source:
+  branch: main
 build_rules:
   - id: allow-zero-findings
     finding_types:
@@ -6,7 +8,5 @@ build_rules:
       - insight
       - "*"
     severity:
-      - SEVERITY_MEDIUM_IMPACT
-      - SEVERITY_HIGH_IMPACT
-      - SEVERITY_LOW_IMPACT
-    threshold: 0
+      - 'critical'
+      - 'moderate'
