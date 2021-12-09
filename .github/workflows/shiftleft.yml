@@ -4,8 +4,13 @@
 name: ShiftLeft
 
 on:
-  pull_request:
+  # Trigger the workflow on push or pull request,
+  # but only for the main branch
   workflow_dispatch:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
   NextGen-Static-Analysis:
